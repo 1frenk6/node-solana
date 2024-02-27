@@ -1,0 +1,8 @@
+.build
+node_modules
+.nyc_output
+.localstack
+.tmp
+__mockutils__
+sdk
+local/

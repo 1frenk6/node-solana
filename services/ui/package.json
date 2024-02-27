@@ -1,0 +1,15 @@
+{
+  "name": "node-solana-ui",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start:dev": "next dev",
+    "build": "next build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.60"
+  }
+}

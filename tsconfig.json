@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "strict": true,
+    "incremental": true,
+    "target": "es2020",
+    "module": "es2020",
+    "declaration": true,
+    "sourceMap": true,
+    "composite": true,
+    "forceConsistentCasingInFileNames": true,
+    "preserveConstEnums": true,
+    "lib": ["es6"],
+    "outDir": ".build",
+    "allowJs": true,
+    "baseUrl": ".",
+    "rootDir": ".",
+    "paths": {
+      "@services/*": ["services/*", "../services/*", "../../services/*", "../../../services/*"],
+      "@components/*": [
+        "components/*",
+        "../components/*",
+        "../../components/*",
+        "../../../components/*",
+        "../../../../components/*"
+      ]
+    },
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "types": ["node", "jest"],
+    "typeRoots": ["./node_modules/@types", "types"],
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "isolatedModules": false,
+    "skipLibCheck": true,
+    "strictFunctionTypes": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "strictPropertyInitialization": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["**/*", "**/tsconfig.json"],
+  "exclude": [".build", "local/*"]
+}

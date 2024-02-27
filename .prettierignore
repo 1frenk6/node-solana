@@ -1,0 +1,8 @@
+node_modules
+.build
+.husky
+.nyc_output
+.localstack
+.tmp
+swagger.json
+sdk
