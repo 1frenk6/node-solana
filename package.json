@@ -9,9 +9,9 @@
     "services/*"
   ],
   "scripts": {
-    "precommit": "npm run lint:check && npm run tsc",
-    "start:dev:ui": "npm run start:dev -w node-solana-ui",
-    "postinstall": "[ \"$NODE_ENV\" = production ] && exit 0; npm run license-checker; husky install",
+    "precommit": "npm run lint:check",
+    "build": "npm run build -ws",
+    "postinstall": "[ \"$NODE_ENV\" = production ] && exit 0; npm run license-checker; husky install; npm run build",
     "lint": "eslint --ext .jsx --ext .js . --ext .ts --ext .tsx --ext json --ext yaml",
     "lint:check": "npm run lint -- --max-warnings 0",
     "pretsc": "rimraf .build",
@@ -19,7 +19,8 @@
     "test": "cross-env TZ=UTC jest .*.spec.ts",
     "license-checker": "license-checker --csv --out ./licenses.csv",
     "sonar:server": " docker-compose -f docker-compose.sonar.yml down -v && docker-compose -f docker-compose.sonar.yml up --force-recreate",
-    "sonar:scanner": "./sonar-change-password.sh; npm run test:coverage && sonar-scanner -Dsonar.host.url=http://localhost:9000 -Dsonar.login=admin -Dsonar.password=password"
+    "sonar:scanner": "./sonar-change-password.sh; npm run test:coverage && sonar-scanner -Dsonar.host.url=http://localhost:9000 -Dsonar.login=admin -Dsonar.password=password",
+    "start:dev:ui": "npm run start:dev -w node-solana-ui"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.3.1",

@@ -3,3 +3,5 @@ node_modules/
 dist/
 coverage
 .build
+services/ui/next-env.d.ts
+services/ui/.next
