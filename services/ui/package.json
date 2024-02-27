@@ -1,5 +1,5 @@
 {
-  "name": "node-solana-ui",
+  "name": "@services/ui",
   "version": "1.0.0",
   "private": true,
   "scripts": {

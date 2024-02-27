@@ -20,7 +20,7 @@
     "license-checker": "license-checker --csv --out ./licenses.csv",
     "sonar:server": " docker-compose -f docker-compose.sonar.yml down -v && docker-compose -f docker-compose.sonar.yml up --force-recreate",
     "sonar:scanner": "./sonar-change-password.sh; npm run test:coverage && sonar-scanner -Dsonar.host.url=http://localhost:9000 -Dsonar.login=admin -Dsonar.password=password",
-    "start:dev:ui": "npm run start:dev -w node-solana-ui"
+    "start:dev:ui": "npm run start:dev -w @services/ui"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.3.1",
@@ -29,6 +29,7 @@
     "@types/node": "^20.10.0",
     "@typescript-eslint/eslint-plugin": "^6.12.0",
     "@typescript-eslint/parser": "^6.12.0",
+    "autoprefixer": "^10.4.17",
     "eslint": "^8.54.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
@@ -38,15 +39,17 @@
     "jest-sonar-reporter": "^2.0.0",
     "license-checker": "^25.0.1",
     "nodemon": "^3.0.1",
+    "postcss": "^8.4.35",
     "prettier": "^3.1.0",
     "rimraf": "^5.0.5",
     "sonarqube-scanner": "^3.3.0",
+    "tailwindcss": "^3.4.1",
     "ts-jest": "^29.1.1",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "tsoa": "^5.1.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.2"
   },
   "jestSonar": {
     "reportPath": "coverage",
@@ -54,8 +57,14 @@
     "indent": 4
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.11",
+    "@mui/material": "^5.15.11",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.17",
     "next": "^14.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.8"
   }
 }

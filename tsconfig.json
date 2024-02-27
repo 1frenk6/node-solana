@@ -23,6 +23,13 @@
         "../../components/*",
         "../../../components/*",
         "../../../../components/*"
+      ],
+      "@ui/*": [
+        "components/ui/*",
+        "../components/ui/*",
+        "../../components/ui/*",
+        "../../../components/ui/*",
+        "../../../../components/ui/*"
       ]
     },
     "noImplicitAny": false,
@@ -44,6 +51,6 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["**/*", "**/tsconfig.json"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "types.d.ts"],
   "exclude": [".build", "local/*"]
 }

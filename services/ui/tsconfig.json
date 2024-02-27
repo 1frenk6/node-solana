@@ -1,10 +1,15 @@
 {
-  "extends": "./../../tsconfig.json",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
     "sourceMap": true,
     "noEmit": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   }
 }
